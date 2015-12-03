@@ -30,10 +30,10 @@
 
 		<p class="errors">All fields are required.</p>
 
-		<p><label>Name: <input type="text" size="25" name="name" id="username"></label></p>
-		<p><label>Email: <input type="text" size="25" name="email" id="email"></label></p>
-		<p><label>Message:<br> <textarea cols="50" rows="5" name="message" id="my_message"></textarea></label></p>
-		<p><input type="submit" value="Contact Us"></p>
+		<p><label>Name: <input type="text" size="25" name="name" id="name"></label><snap id="error_name"></snap></p>
+		<p><label>Email: <input type="text" size="25" name="email" id="email"></label><snap id="error_email"></snap></p>
+		<p><label>Message:<br> <textarea cols="50" rows="5" name="message" id="message"></textarea></label><snap id="error_message"></snap></p>
+		<p><input id="submit_btn" type="submit" value="Contact Us"></p>
 	</form>
 
 	</div>
@@ -44,5 +44,69 @@
 
 </div>
 
+
+
+
+    <script>
+        var submit_btn = document.getElementById("submit_btn");
+        var the_name = document.getElementById("name");
+        var the_email = document.getElementById("email");
+        var the_message = document.getElementById("message");
+        var my_form = document.getElementById("myform");
+        var error_name = document.getElementById("error_name");
+        var error_email = document.getElementById("error_email");
+        var error_message = document.getElementById("error_message");
+        
+        my_form.onsubmit = function () {
+            var errors = 0;
+            var user_name = the_name.value;
+            var user_email = the_email.value;
+            var user_message = the_message.value;
+            
+            if (user_name == "") {
+                the_name.style.border = "1px solid #C00";
+                the_name.style.boxShadow = "0 0 5px #C00";
+                error_name.innerHTML = "HELLLOOO???";
+                errors++;
+            } else {
+                the_name.style.border = "1px solid green";
+                the_name.style.boxShadow = "none";
+
+            }
+            
+            if (user_email == "") {
+                the_email.style.border = "1px solid #C00";
+                the_email.style.boxShadow = "0 0 5px #C00";
+                error_email.innerHTML = "HELLLOOO???";
+                errors++;
+            } else {
+                the_email.style.border = "1px solid green";
+                the_email.style.boxShadow = "none";
+
+            }
+            
+            if (user_message == "") {
+                the_message.style.border = "1px solid #C00";
+                the_message.style.boxShadow = "0 0 5px #C00";
+                error_message.innerHTML = "HELLLOOO???";
+
+                errors++;
+            } else {
+                the_message.style.border = "1px solid green";
+                the_message.style.boxShadow = "none";
+
+            }
+            
+            if (errors > 0) {
+               return false; 
+            }
+            
+        }
+    
+    
+    
+    
+    
+    </script>
 </body>
 </html>

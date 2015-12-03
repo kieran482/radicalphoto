@@ -119,6 +119,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 	background: #333;
 	border: 3px solid #333;
+    font-size: 16px;
 }
 
 #slider p {
@@ -134,4 +135,21 @@ h1, h2, h3, h4, h5, h6 {
 	color: #999;
 	text-align: right;
 	padding: 15px;
+}
+
+#date {
+    width: 525px;
+    height: 50px;
+    border: 2px solid grey;
+    padding-left: 20px;
+    border-radius: 20px;
+    margin: 0 5px;
+    font-size: 18px;
+    font-style: italic;
+}
+
+#error_name, #error_email, #error_message {
+    margin-left: 20px;
+    color: red;
+    font-weight: bold;
 }

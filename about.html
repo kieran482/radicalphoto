@@ -24,17 +24,19 @@
 	<div id="content">
 	<h2>About RadicalPhoto</h2>
 
-	<p>Today is <span>July 17, 2015</span>. Stay tuned, we have exciting news about our company coming in a few more weeks!</p>
+	<p>Today is <input id="date" name="date"> Stay tuned, we have exciting news about our company coming in a few more weeks!</p>
 
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 
 	<h3>Our Team</h3>
 
 	<p id="bios">
-		<a href="sheila.html">Sheila</a> (President) | 
-		<a href="frank.html">Frank</a> (Vice President) | 
-		<a href="joanne.html">Joanne</a> (Senior Photographer)
+		<a id="sheila" href="sheila.html">Sheila</a> (President) | 
+		<a id="frank" href="frank.html">Frank</a> (Vice President) | 
+		<a id="joanne" href="joanne.html">Joanne</a> (Senior Photographer)
 	</p> 
+	
+	<img id="coworkers" src="images/bio1.jpg" width="200" height="133" alt="hotgirl">
 
 	<div id="bio"></div>
 
@@ -46,5 +48,35 @@
 
 </div>
 
+
+    <script>
+      document.getElementById('date').value = Date();
+        
+        var sheila = document.getElementById("sheila");
+        var frank = document.getElementById("frank");
+        var joanne = document.getElementById("joanne");
+        var coworkers = document.getElementById("coworkers");
+        
+        function hover_sheila() {
+            coworkers.src = "images/bio1.jpg";
+        }
+        
+        function hover_frank() {
+            coworkers.src = "images/bio3.jpg";
+        }
+        
+        function hover_joanne() {
+            coworkers.src = "images/bio2.jpg";
+        }
+        
+        
+        
+        
+        
+        sheila.onmouseover = hover_sheila;
+        frank.onmouseover = hover_frank;
+        joanne.onmouseover = hover_joanne;
+    
+    </script>
 </body>
 </html>

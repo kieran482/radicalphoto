@@ -28,16 +28,15 @@
 
 	<div id="gallery">
 		<ul>
-			<li><a href="images/blue_dress.jpg"><img src="images/blue_dress_thumb.jpg"></a></li>
-			<li><a href="images/boxer.jpg"><img src="images/boxer_thumb.jpg"></a></li>
-			<li><a href="images/cow.jpg"><img src="images/cow_thumb.jpg"></a></li>
-			<li><a href="images/country_boy_relaxing.jpg"><img src="images/country_boy_relaxing_thumb.jpg"></a></li>
-			<li><a href="images/eye.jpg"><img src="images/eye_thumb.jpg"></a></li>
-			<li><a href="images/ice_swim.jpg"><img src="images/ice_swim_thumb.jpg"></a></li>
-			<li><a href="images/sitting.jpg"><img src="images/sitting_thumb.jpg"></a></li>
+            <li><a href="images/blue_dress.jpg"><img id="blue_dress" src="images/blue_dress_thumb.jpg" alt="blue dress"></a></li>
+            <li><a href="images/boxer.jpg"><img id="boxer" src="images/boxer_thumb.jpg" alt="boxer"></a></li>
+            <li><a href="images/country_boy_relaxing.jpg"><img id="country_boy" src="images/country_boy_relaxing_thumb.jpg" alt="country boy"></a></li>
+            <li><a href="images/eye.jpg"><img id="eye_thumb" src="images/eye_thumb.jpg" alt="eye thumb"></a></li>
+            <li><a href="images/ice_swim.jpg"><img id="ice_swim" src="images/ice_swim_thumb.jpg" alt="ice swim"></a></li>
+            <li><a href="images/sitting.jpg"><img id="sitting_thumb" src="images/sitting_thumb.jpg" alt="sitting"></a></li>
 		</ul>
 
-		<p><img src="images/blue_dress.jpg" alt=""></p>
+		<p><img id="main_img" src="images/blue_dress.jpg" alt="main image"></p>
 
 	</div>
 
@@ -49,5 +48,52 @@
 
 </div>
 
+
+    <script>
+        var blue_dress = document.getElementById("blue_dress");
+        var boxer = document.getElementById("boxer");
+        var main_img = document.getElementById("main_img");
+        var country_boy = document.getElementById("country_boy");
+        var eye_thumb = document.getElementById("eye_thumb");
+        var ice_swim = document.getElementById("ice_swim");
+        var sitting_thumb = document.getElementById("sitting_thumb");
+        
+        
+        function display_boxer() {
+            main_img.src = "images/boxer.jpg";
+        }
+
+        function display_bluedress() {
+            main_img.src = "images/blue_dress.jpg";
+            
+        }
+
+        
+        function display_countryboy() {
+            main_img.src = "images/country_boy_relaxing.jpg";
+        }
+        
+        function display_eye() {
+            main_img.src = "images/eye.jpg";
+        }
+        
+        function display_iceswim() {
+            main_img.src = "images/ice_swim.jpg";
+        }
+
+        function display_thumb() {
+            main_img.src = "images/sitting.jpg";
+        }
+        
+        
+        blue_dress.onmouseover = display_bluedress;
+        boxer.onmouseover = display_boxer;
+        country_boy.onmouseover = display_countryboy;
+        eye_thumb.onmouseover = display_eye;
+        ice_swim.onmouseover = display_iceswim;
+        sitting_thumb.onmouseover = display_thumb;
+    
+    
+    </script>
 </body>
 </html>

@@ -25,8 +25,8 @@
 	<h2>Page heading</h2>
 
 	<div id="slider">
-	    <img src="images/slider_alligator.jpg" title="Chomp">
-		<p>Award Winning Photography</p>
+	    <img src="images/slider_alligator.jpg" title="Chomp" alt="alligator">
+		<p id="capture_nature">Award Winning Photography</p>
 	</div>
 
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
@@ -56,5 +56,18 @@
 
 </div>
 
+    <script>
+        var changeText = document.getElementById("capture_nature");
+        var bckrnd = document.getElementById("slider");
+
+        // Capture Nature Text
+        function execute() {
+            changeText.innerHTML = "Capturing Nature!"; 
+            changeText.style.fontSize = "32px";
+            bckrnd.style.background = "green";
+        }
+
+        setTimeout(execute, 2500);
+    </script>
 </body>
 </html>
